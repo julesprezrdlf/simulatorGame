@@ -1,0 +1,51 @@
+[
+    {
+        "id": "00",
+        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/office-manager.736ae0ef.png",
+        "name": "Office Manager",
+        "text": "Good news! we just moved into our office and things are looking bright",
+        "option1": "Cool",
+        "option2": "Sweet",
+        "option1money": 250,
+        "option1happy": 0,
+        "option2money": 250,
+        "option2happy": 0
+    },
+    {
+        "id": "01",
+        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/product-manager.413996be.png",
+        "name": "Eric, product manager",
+        "text": "People love our product, but I think it's because we're cheap. Should we raise the price?",
+        "option1": "Only for new users",
+        "option2": "Hit them hard!",
+        "option1money": 250,
+        "option1happy": 0,
+        "option2money": 250,
+        "option2happy": 0
+    },
+    {
+        "id": "02",
+        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/cfo.37f1896d.png",
+        "name": "Sheryl, CFO",
+        "text": "We're about to raise series A funding. Where are those documents you promised?",
+        "option1": "Blame if on Chad",
+        "option2": "Put something together",
+        "option1money": 250,
+        "option1happy": 0,
+        "option2money": 250,
+        "option2happy": 0
+    },
+    {
+        "id": "03",
+        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/chad-marketing.e66c8d32.png",
+        "name": "Chad, marketing",
+        "text": "Can I have a standing desk? I have a bad back.",
+        "option1": "Come on!",
+        "option2": "Sure",
+        "option1money": 250,
+        "option1happy": 0,
+        "option2money": 250,
+        "option2happy": 0
+    }
+   
+]
