@@ -69,175 +69,8 @@ import events from '../assets/events.json'
 export default {
   data() {
     return {
-        eventos: [{
-        "id": "01",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/product-manager.413996be.png",
-        "name": "Eric, product manager",
-        "text": "People love our product, but I think it's because we're cheap. Should we raise the price?",
-        "option1": "Only for new users",
-        "option2": "Hit them hard!",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "02",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/cfo.37f1896d.png",
-        "name": "Sheryl, CFO",
-        "text": "We're about to raise series A funding. Where are those documents you promised?",
-        "option1": "Blame if on Chad",
-        "option2": "Put something together",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "03",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/chad-marketing.e66c8d32.png",
-        "name": "Chad, marketing",
-        "text": "Can I have a standing desk? I have a bad back.",
-        "option1": "Come on!",
-        "option2": "Sure",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "04",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/support-01.37b49faa.png",
-        "name": "Bubba, support",
-        "text": "One of our account managers just told a client to eat dog shit...",
-        "option1": "Fire them",
-        "option2": "Sit them out",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "05",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/tanya-frontend.b4f5241f.png",
-        "name": "Tanya, developer",
-        "text": "Your lead developer calls you a n00b in front of the whole team.",
-        "option1": "Call them \"Fired!\"",
-        "option2": "Laugh it off",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "06",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/support-01.37b49faa.png",
-        "name": "Bubba, support",
-        "text": "Twitter is enraged because you bragged about your \"all-man wreckin crew\"",
-        "option1": "Whatever",
-        "option2": "Hire 2 female developers",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "07",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/vc-raiden.9e9b980a.png",
-        "name": "Raiden, mentor",
-        "text": "You should hire way more people.",
-        "option1": "Check overtime hours",
-        "option2": "Hire HR manager",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "08",
-        "avatar": " https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/journalist.fd0c84f9.png",
-        "name": "Journalist",
-        "text": "One of your ex-employees went to the press saying you spend all your days googling yourself",
-        "option1": "Google the article",
-        "option2": "Write an article",
-        "option1money": -150,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "09",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/assistant.4f84b31e.png",
-        "name": "Kevin, assistant",
-        "text": "You remember you have a pitch coming up early tomorrow morning, right?",
-        "option1": "I will improvise",
-        "option2": "Prepare slideshow",
-        "option1money": -60,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "10",
-        "avatar": " https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/seo-manager.52c653b3.png",
-        "name": "Stella, growth hacker",
-        "text": "Verizon wants to feature our product in their newsletter to 50k people.",
-        "option1": "Let's celebrate!",
-        "option2": "Awesome",
-        "option1money": 80,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "11",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/designer-01.51c7138e.png",
-        "name": "Clive, designer",
-        "text": "I want a $10 000 raise or I will quit.",
-        "option1": "Give the raise",
-        "option2": "Negotiate",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "12",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/victor-frontend.947aa64c.png",
-        "name": "Victor, developer",
-        "text": "Uhmmm, I just learned our codebase has no unit tests...",
-        "option1": "Fix it",
-        "option2": "YOLO",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "13",
-        "avatar": "https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/backend-dev-01.9ea7e42b.png",
-        "name": "Lars, backend",
-        "text": "Our site just got banned in China.",
-        "option1": "Ok",
-        "option2": "Whatever",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    },
-    {
-        "id": "14",
-        "avatar": "   https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/vc-mike.4e6da46b.png",
-        "name": "Mike, investor",
-        "text": "You have been ignoring us for the past month and we are really pissed off.",
-        "option1": "Schedule some meetings",
-        "option2": "Go dark",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
-        "option2happy": 0
-    }],
-      // dates longitud = 56
+      
+    // dates longitud = 56
       dates: [
         'January 3',
         'January 10',
@@ -324,16 +157,11 @@ export default {
     fetchJsonLength() {
       this.jsonLength = Object.keys(events).length
       this.randomEvents=events;
-      this.eventos.sort(() => Math.random() - 0.5);
       this.randomEvents.sort(() => Math.random() - 0.5);
     },
     nextItem() {
-      // this.currentEvent.shift()
-      // this.eventCounter++
-      // this.currentEvent.push(events[this.eventCounter])
-      // this.dateDisplay = this.dates[this.eventCounter]
 
-            this.currentEvent.shift()
+     this.currentEvent.shift()
       this.eventCounter++
       this.currentEvent.push(this.randomEvents[this.eventCounter])
       this.dateDisplay = this.dates[this.eventCounter]
@@ -354,7 +182,7 @@ export default {
   padding: 0 16px;
   cursor: pointer;
   height: 40px;
-  min-width: 200px;
+  /* min-width: 200px; */
 
   transition: all 0.3s ease-in-out;
 }
