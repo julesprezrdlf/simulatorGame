@@ -69,8 +69,7 @@ import events from '../assets/events.json'
 export default {
   data() {
     return {
-      
-    // dates longitud = 56
+      // dates longitud = 56
       dates: [
         'January 3',
         'January 10',
@@ -142,30 +141,25 @@ export default {
   beforeMount() {
     this.fetchArrayEvents()
     this.fetchJsonLength()
-
   },
   methods: {
     fetchArrayEvents() {
       this.currentEvent.push(events[0])
       for (let index = 1; index < this.jsonLength; index++) {
         this.arrayEvents.push(events[index])
-      
       }
-
-
     },
     fetchJsonLength() {
       this.jsonLength = Object.keys(events).length
-      this.randomEvents=events;
-      this.randomEvents.sort(() => Math.random() - 0.5);
+      this.randomEvents = events
+      this.randomEvents.sort(() => Math.random() - 0.5)
     },
     nextItem() {
-
-     this.currentEvent.shift()
+      this.currentEvent.shift()
       this.eventCounter++
       this.currentEvent.push(this.randomEvents[this.eventCounter])
       this.dateDisplay = this.dates[this.eventCounter]
-    }
+    },
   },
 }
 </script>
