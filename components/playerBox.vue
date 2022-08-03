@@ -175,7 +175,7 @@ export default {
   border: 1px solid black;
   padding: 0 16px;
   cursor: pointer;
-  height: 40px;
+  min-height: 40px;
   /* min-width: 200px; */
 
   transition: all 0.3s ease-in-out;
