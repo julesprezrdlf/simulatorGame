@@ -55,7 +55,7 @@
         </button>
         <button
           class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-2 mb-5"
-        @click="randomArray">
+        >
           {{ item.option2 }}
         </button>
       </div>
@@ -69,9 +69,8 @@ import events from '../assets/events.json'
 export default {
   data() {
     return {
-      //   eventos: events,
+    //   eventos: events,
       arrayEvents: [],
-      randomEvents:[],
       currentEvent: [],
       jsonLength: null,
       eventCounter: 0,
@@ -79,66 +78,26 @@ export default {
   },
   computed: {},
   beforeMount() {
-    this.fetchArrayEvents()
-    this.fetchJsonLength()
-    // this.randomArray()
+    this.fetchArrayEvents();
+    this.fetchJsonLength();
   },
   methods: {
     fetchArrayEvents() {
-      this.currentEvent.push(events[0])
+      this.currentEvent.push(events[0]);
       for (let index = 1; index < this.jsonLength; index++) {
-        this.arrayEvents.push(events[index])
+         this.arrayEvents.push(events[index]);
       }
-    },
-
-
-
-
-
-
-
-    randomArray(){
-      
-
- const numbers = [...this.arrayEvents];
-      let first;
-        let second;
-       let temp;
-       const count = this.jsonLength;
-      for (let i = 0; i < this.jsonLength; i++) {
-        first = Math.floor(Math.random() * count);
-        second = Math.floor(Math.random() * count);
-        temp = numbers[first];
-        numbers[first] = numbers[second];
-        numbers[second] = temp;
-      }
-      this.randomEvents = numbers;
-      console.log("hola");
-console.log(this.arrayEvents);
-      console.log(numbers);
-      // this.currentEvent=numbers;
    
-
-
-
-
-
     },
-
-
-
-
-
-
     fetchJsonLength() {
       this.jsonLength = Object.keys(events).length
     },
-    nextItem() {
-      this.currentEvent.shift()
-      this.eventCounter++
-      this.currentEvent.push(events[this.eventCounter])
-      
-    },
+    nextItem(){
+        this.currentEvent.shift();
+        this.eventCounter++;
+        this.currentEvent.push(events[this.eventCounter]);
+        
+    }
   },
 }
 </script>
