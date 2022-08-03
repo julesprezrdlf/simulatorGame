@@ -15,8 +15,8 @@
         <p>Happiness</p>
       </div>
       <div class="DateContainer">
-        <p class="mb-2">January</p>
-        <div class="progressBar"><p class="limit">111</p></div>
+        <p class="mb-2">{{dateDisplay}}</p>
+        <!-- <div class="progressBar"><p class="limit">111</p></div> -->
       </div>
     </div>
 
@@ -70,6 +70,8 @@ export default {
   data() {
     return {
     //   eventos: events,
+    dates:["January 3","January 10","January 15","January 22","January 25","February 3","February 10","February 16","February 27","March 2","March 9","March 15","March 17","March 20","March 29","April 1","April 15","April 30","May 2","May 5","May 10","May 17","May 19","May 27","May 29","June 10","June 12","June 18","June 28","July 6","July 7","July 18","July 20","July 29","August 1","August 15","August 30","September 5","September 12","September 20","September 22","September 30","October 2","October 8","October 16","October 21","November 1","November 5","November 13","November 19","November 21","November 29","November 30","December 10","December 20","December 30"],
+      dateDisplay: "January 1",
       arrayEvents: [],
       currentEvent: [],
       jsonLength: null,
@@ -96,6 +98,7 @@ export default {
         this.currentEvent.shift();
         this.eventCounter++;
         this.currentEvent.push(events[this.eventCounter]);
+        this.dateDisplay=this.dates[this.eventCounter];
         
     }
   },

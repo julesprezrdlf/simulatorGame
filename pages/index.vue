@@ -23,7 +23,7 @@ export default {
     methods: {
         setSplashUnActive(value) {
             this.splashIsActive = false;
-            this.tutorialIsActive = true; 
+            this.tutorialIsActive = true;       
         },
             setTutorialUnActive(value) {
             this.tutorialIsActive = false;
