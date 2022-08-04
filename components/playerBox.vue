@@ -51,7 +51,7 @@
         <button class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2" @click="nextItem">
           {{ item.option1 }}
         </button>
-        <button class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-2 mb-5">
+        <button class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-2 mb-5 " @click="nextItem2">
           {{ item.option2 }}
         </button>
       </div>
@@ -157,6 +157,45 @@ export default {
 
       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option1money
       this.happiness = this.happiness + this.currentEvent[0].option1happy
+
+if (this.happiness < 0 || this.moneyDisplay < 0) {
+  alert("you lose");
+} else {
+   if ((this.happiness > 0) && (this.moneyDisplay > 0) && (this.dateDisplay !== "December 30")) { 
+        this.currentEvent.shift()
+        this.eventCounter++
+        this.currentEvent.push(this.randomEvents[this.eventCounter])
+        this.dateDisplay = this.dates[this.eventCounter]
+
+      }
+
+
+ if ((this.happiness > 0) && (this.moneyDisplay > 0) && (this.dateDisplay === "December 30")) {
+        alert("win");
+        this.currentEvent.shift()
+        this.eventCounter++
+        this.currentEvent.push(this.randomEvents[this.eventCounter])
+        this.dateDisplay = this.dates[this.eventCounter]
+
+      }
+
+if ((this.happiness > 0) && (this.moneyDisplay < 1000) && (this.dateDisplay === "December 30")) {
+        alert("win pero poco");
+        this.currentEvent.shift()
+        this.eventCounter++
+        this.currentEvent.push(this.randomEvents[this.eventCounter])
+        this.dateDisplay = this.dates[this.eventCounter]
+
+      }
+}
+
+    },
+
+     nextItem2() {
+
+
+      this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option2money
+      this.happiness = this.happiness + this.currentEvent[0].option2happy
 
 if (this.happiness < 0 || this.moneyDisplay < 0) {
   alert("you lose");
