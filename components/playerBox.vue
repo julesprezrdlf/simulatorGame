@@ -162,12 +162,12 @@ export default {
       this.randomEvents.sort(() => Math.random() - 0.5)
     },
     nextItem() {
-       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option1money
-       this.happiness = this.happiness + this.currentEvent[0].option1happy
-      this.currentEvent.shift()
-      this.eventCounter++
-      this.currentEvent.push(this.randomEvents[this.eventCounter])
-      this.dateDisplay = this.dates[this.eventCounter]
+       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option1money;
+       this.happiness = this.happiness + this.currentEvent[0].option1happy;
+      this.currentEvent.shift();
+      this.eventCounter++;
+      this.currentEvent.push(this.randomEvents[this.eventCounter]);
+      this.dateDisplay = this.dates[this.eventCounter];
      
     },
   },
