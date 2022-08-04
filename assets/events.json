@@ -18,9 +18,9 @@
         "text": "People love our product, but I think it's because we're cheap. Should we raise the price?",
         "option1": "Only for new users",
         "option2": "Hit them hard!",
-        "option1money": 250,
-        "option1happy": 10,
-        "option2money": 250,
+        "option1money": -250,
+        "option1happy": -10,
+        "option2money": -250,
         "option2happy": 0
     },
     {
@@ -30,9 +30,9 @@
         "text": "We're about to raise series A funding. Where are those documents you promised?",
         "option1": "Blame if on Chad",
         "option2": "Put something together",
-        "option1money": 250,
-        "option1happy": 10,
-        "option2money": 250,
+        "option1money": -250,
+        "option1happy": -10,
+        "option2money": -250,
         "option2happy": 0
     },
     {
@@ -42,9 +42,9 @@
         "text": "Can I have a standing desk? I have a bad back.",
         "option1": "Come on!",
         "option2": "Sure",
-        "option1money": 250,
-        "option1happy": 10,
-        "option2money": 250,
+        "option1money": -250,
+        "option1happy": -10,
+        "option2money": -250,
         "option2happy": 0
     },
     {
@@ -54,9 +54,9 @@
         "text": "One of our account managers just told a client to eat dog shit...",
         "option1": "Fire them",
         "option2": "Sit them out",
-        "option1money": 250,
-        "option1happy": 10,
-        "option2money": 250,
+        "option1money": -250,
+        "option1happy": -10,
+        "option2money": -250,
         "option2happy": 0
     },
     {
@@ -66,9 +66,9 @@
         "text": "Your lead developer calls you a n00b in front of the whole team.",
         "option1": "Call them \"Fired!\"",
         "option2": "Laugh it off",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
+        "option1money": -250,
+        "option1happy": -0,
+        "option2money": -250,
         "option2happy": 0
     },
     {
@@ -78,9 +78,9 @@
         "text": "Twitter is enraged because you bragged about your \"all-man wreckin crew\"",
         "option1": "Whatever",
         "option2": "Hire 2 female developers",
-        "option1money": 250,
-        "option1happy": 0,
-        "option2money": 250,
+        "option1money": -250,
+        "option1happy": -0,
+        "option2money": -250,
         "option2happy": 0
     },
     {
@@ -90,9 +90,9 @@
         "text": "You should hire way more people.",
         "option1": "Check overtime hours",
         "option2": "Hire HR manager",
-        "option1money": 250,
+        "option1money": -250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money": -250,
         "option2happy": 0
     },
     {
@@ -104,7 +104,7 @@
         "option2": "Write an article",
         "option1money": -150,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money": -250,
         "option2happy": 0
     },
     {
@@ -116,7 +116,7 @@
         "option2": "Prepare slideshow",
         "option1money": -60,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -128,7 +128,7 @@
         "option2": "Awesome",
         "option1money": 80,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -138,9 +138,9 @@
         "text": "I want a $10 000 raise or I will quit.",
         "option1": "Give the raise",
         "option2": "Negotiate",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -150,9 +150,9 @@
         "text": "Uhmmm, I just learned our codebase has no unit tests...",
         "option1": "Fix it",
         "option2": "YOLO",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -162,9 +162,9 @@
         "text": "Our site just got banned in China.",
         "option1": "Ok",
         "option2": "Whatever",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -174,9 +174,9 @@
         "text": "You have been ignoring us for the past month and we are really pissed off.",
         "option1": "Schedule some meetings",
         "option2": "Go dark",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -186,9 +186,9 @@
         "text": "I want to use your blood in my longevity experiment in exhange for investment",
         "option1": "Sure",
         "option2": "No way",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -200,7 +200,7 @@
         "option2": "Music to my ears",
         "option1money": 70,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -210,9 +210,9 @@
         "text": "I'm quitting to start a rap career",
         "option1": "Good riddance",
         "option2": "Sign a promotional deal",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -222,9 +222,9 @@
         "text": "I will give you 10 million dollars if you agree to share offices with my initech team.",
         "option1": "Sure",
         "option2": "Nope",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -234,9 +234,9 @@
         "text": "Your best friend just got an MBA and wants to join your company in BizDev",
         "option1": "Sure",
         "option2": "No way",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -246,9 +246,9 @@
         "text": "You still haven't used your 7 days of mandatory vacation this year",
         "option1": "Pretend you're on holiday",
         "option2": "Ignore it",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -258,9 +258,9 @@
         "text": "We have technical debt but need to start the next sprint.",
         "option1": "Fire the team",
         "option2": "Sit them down",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -270,9 +270,9 @@
         "text": "Our competitor just got a billion dollar valuation",
         "option1": "Bash them publicly",
         "option2": "Whatever",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -282,9 +282,9 @@
         "text": "TechCruch Disrupt is next week. Are you coming?",
         "option1": "I'm busy",
         "option2": "Free beer?",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -294,9 +294,9 @@
         "text": "One of our employees left their unlocked phone at a bar. This is a serious security breach",
         "option1": "Fire them",
         "option2": "Let them stay",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -306,9 +306,9 @@
         "text": "I want to build a game as a side-project.",
         "option1": "Sounds great",
         "option2": "Get back to work",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -318,9 +318,9 @@
         "text": "I want to invest in your company and I want 40%",
         "option1": "Fuck this guy",
         "option2": "Let's do it",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -330,9 +330,9 @@
         "text": "Our app is booming in Japan",
         "option1": "Arigato",
         "option2": "Make some landing pages",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -342,9 +342,9 @@
         "text": "One of our devs quit to start a game studio, he took half of our team with him!",
         "option1": "Oh well",
         "option2": "F*CK",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -354,9 +354,9 @@
         "text": "Recruiters have been sending aggressive emails to our engineers",
         "option1": "Raise salaries",
         "option2": "Start poaching talent yourself",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -366,9 +366,9 @@
         "text": "You're nominated for Forbes next article",
         "option1": "Ride the wave",
         "option2": "Ignore",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -378,9 +378,9 @@
         "text": "Our customers are asking for a multilingual product.",
         "option1": "No hablo idioma",
         "option2": "Hire a translator",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -390,9 +390,9 @@
         "text": "The cops busted our Christmas party. Seems something special was in the punch",
         "option1": "Chaaaaaad!",
         "option2": "Switch the phone off",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -402,9 +402,9 @@
         "text": "Your developers want to bring go-go dancers to a conference event we're hosting",
         "option1": "NO WAY",
         "option2": "Hell yeah!",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -414,9 +414,9 @@
         "text": "One of Google's star developers wants to join our company",
         "option1": "Cool!",
         "option2": "There's only one star here",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -426,9 +426,9 @@
         "text": "A Chinese company copied our design and has just filed for an IPO",
         "option1": "Sue them",
         "option2": "Call the press",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -438,9 +438,9 @@
         "text": "We should buy some print advertising. It'll cheap, I promise",
         "option1": "If you say so",
         "option2": "No",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -450,9 +450,9 @@
         "text": "Chad just sent a racist email to 5 000 contacts.",
         "option1": "Chaaaaaad!",
         "option2": "Take their side",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -462,9 +462,9 @@
         "text": "We need to collect more e-amils for leads. I'm thinking full-page pop ups EVERYWHERE!!",
         "option1": "Popups are awful",
         "option2": "We will bury them!",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -474,9 +474,9 @@
         "text": "Airbnb starts to use your product and wants to do a cross-promotion with you.",
         "option1": "Let's do it",
         "option2": "Not my target demogrpahic",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -486,9 +486,9 @@
         "text": "Users are complaining about one of out rude support employees.",
         "option1": "Fire them",
         "option2": "Whatever",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -498,9 +498,9 @@
         "text": "Another startup wants to hire you for consulting.",
         "option1": "Come on!",
         "option2": "Sure",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -510,9 +510,9 @@
         "text": "Our app got featured in the App Store",
         "option1": "Brag about it",
         "option2": "Call the investors!",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -522,9 +522,9 @@
         "text": "HuffPost twants to publish an article about you",
         "option1": "Sure!",
         "option2": "No time",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -534,9 +534,9 @@
         "text": "Three of our key employees want to go on a sabbatical... together",
         "option1": "Sounds fishy",
         "option2": "Whatever they need",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -546,9 +546,9 @@
         "text": "It's time to scale up! We need five new people",
         "option1": "Hire for sales",
         "option2": "Hire devs",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -558,9 +558,9 @@
         "text": "More and more customers are asking for a free trial.",
         "option1": "Nobody rides for free",
         "option2": "Yeah, sure",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -570,9 +570,9 @@
         "text": "Donald Trump sent you an invite to attend his 4th wedding.",
         "option1": "Tremendous!",
         "option2": "No way Donald",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -582,9 +582,9 @@
         "text": "Transparency is so hot right now - can I do a blog post about our growth data",
         "option1": "Let's do it",
         "option2": "Keep it private",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {
@@ -594,9 +594,9 @@
         "text": "Hey, our partner wants to 'touch base' - got time?",
         "option1": "Yes",
         "option2": "No",
-        "option1money": 250,
+        "option1money":-250,
         "option1happy": 0,
-        "option2money": 250,
+        "option2money":-250,
         "option2happy": 0
     },
     {

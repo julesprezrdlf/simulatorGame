@@ -1,18 +1,14 @@
 <template>
-  <div
-    class="playerBoxContainer p-5 sm:w-80 w-screen h-screen sm:h-auto sm sm:w-1/3"
-  >
+  <div class="playerBoxContainer p-5 sm:w-80 w-screen h-screen sm:h-auto sm sm:w-1/3">
     <div class="hudContainer grid grid-cols-4 gap-4">
       <div class="moneyContainer">
-        <p class="mb-0 text-xl"> $ {{moneyDisplay}} M</p>
+        <p class="mb-0 text-xl"> $ {{ moneyDisplay }} M</p>
         <p> Valuation</p>
       </div>
       <div class="HappinessContainer grid justify-items-center col-span-2">
-        <img
-          class="smileyContainer mb-2"
-          src="https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/happiness-06.a501ff39.png"
-        />
-        <p>{{happiness}}</p>
+        <img class="smileyContainer mb-2"
+          src="https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/happiness-06.a501ff39.png" />
+        <p>{{ happiness }}</p>
         <p>Happiness</p>
       </div>
       <div class="DateContainer">
@@ -52,15 +48,10 @@
     <!-- Button text from JSON -->
     <div v-for="item in currentEvent" :key="item.id">
       <div class="playerButtonArea grid grid-cols-6">
-        <button
-          class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2"
-          @click="nextItem"
-        >
+        <button class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2" @click="nextItem">
           {{ item.option1 }}
         </button>
-        <button
-          class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-2 mb-5"
-        >
+        <button class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-2 mb-5">
           {{ item.option2 }}
         </button>
       </div>
@@ -74,7 +65,7 @@ import events from '../assets/events.json'
 export default {
   data() {
     return {
-      // dates longitud = 56
+      // dates l = 56
       dates: [
         'January 3',
         'January 10',
@@ -135,7 +126,7 @@ export default {
       ],
       dateDisplay: 'January 1',
       moneyDisplay: 1,
-      happiness:50,
+      happiness: 50,
       arrayEvents: [],
       currentEvent: [],
       randomEvents: [],
@@ -162,13 +153,47 @@ export default {
       this.randomEvents.sort(() => Math.random() - 0.5)
     },
     nextItem() {
-       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option1money
-       this.happiness = this.happiness + this.currentEvent[0].option1happy
-      this.currentEvent.shift()
-      this.eventCounter++
-      this.currentEvent.push(this.randomEvents[this.eventCounter])
-      this.dateDisplay = this.dates[this.eventCounter]
-     
+
+
+      this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option1money
+      this.happiness = this.happiness + this.currentEvent[0].option1happy
+
+if (this.happiness < 0 || this.moneyDisplay < 0) {
+  alert("you lose");
+} else {
+   if ((this.happiness > 0) && (this.moneyDisplay > 0) && (this.dateDisplay !== "December 30")) { 
+        this.currentEvent.shift()
+        this.eventCounter++
+        this.currentEvent.push(this.randomEvents[this.eventCounter])
+        this.dateDisplay = this.dates[this.eventCounter]
+
+      }
+
+
+ if ((this.happiness > 0) && (this.moneyDisplay > 0) && (this.dateDisplay === "December 30")) {
+        alert("win");
+        this.currentEvent.shift()
+        this.eventCounter++
+        this.currentEvent.push(this.randomEvents[this.eventCounter])
+        this.dateDisplay = this.dates[this.eventCounter]
+
+      }
+
+if ((this.happiness > 0) && (this.moneyDisplay < 1000) && (this.dateDisplay === "December 30")) {
+        alert("win pero poco");
+        this.currentEvent.shift()
+        this.eventCounter++
+        this.currentEvent.push(this.randomEvents[this.eventCounter])
+        this.dateDisplay = this.dates[this.eventCounter]
+
+      }
+}
+
+ 
+
+
+
+
     },
   },
 }
