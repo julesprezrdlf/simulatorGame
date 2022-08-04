@@ -7,7 +7,7 @@
         "option1": "Cool",
         "option2": "Sweet",
         "option1money": 150,
-        "option1happy": 0,
+        "option1happy": 13,
         "option2money": 150,
         "option2happy": 0
     },
@@ -19,7 +19,7 @@
         "option1": "Only for new users",
         "option2": "Hit them hard!",
         "option1money": 250,
-        "option1happy": 0,
+        "option1happy": 10,
         "option2money": 250,
         "option2happy": 0
     },
@@ -31,7 +31,7 @@
         "option1": "Blame if on Chad",
         "option2": "Put something together",
         "option1money": 250,
-        "option1happy": 0,
+        "option1happy": 10,
         "option2money": 250,
         "option2happy": 0
     },
@@ -43,7 +43,7 @@
         "option1": "Come on!",
         "option2": "Sure",
         "option1money": 250,
-        "option1happy": 0,
+        "option1happy": 10,
         "option2money": 250,
         "option2happy": 0
     },
@@ -55,7 +55,7 @@
         "option1": "Fire them",
         "option2": "Sit them out",
         "option1money": 250,
-        "option1happy": 0,
+        "option1happy": 10,
         "option2money": 250,
         "option2happy": 0
     },

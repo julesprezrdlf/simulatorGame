@@ -4,18 +4,19 @@
   >
     <div class="hudContainer grid grid-cols-4 gap-4">
       <div class="moneyContainer">
-        <p class="mb-2">$ 150M</p>
-        <p>Valuation</p>
+        <p class="mb-0 text-xl"> $ {{moneyDisplay}} M</p>
+        <p> Valuation</p>
       </div>
       <div class="HappinessContainer grid justify-items-center col-span-2">
         <img
           class="smileyContainer mb-2"
           src="https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/happiness-06.a501ff39.png"
         />
+        <p>{{happiness}}</p>
         <p>Happiness</p>
       </div>
       <div class="DateContainer">
-        <p class="mb-2">{{ dateDisplay }}</p>
+        <p class="mb-2 text-xl">{{ dateDisplay }}</p>
         <!-- <div class="progressBar"><p class="limit">111</p></div> -->
       </div>
     </div>
@@ -40,6 +41,10 @@
           <vue-typed-js :typeSpeed="10" :strings="[item.text]">
             <h1 class="typing text-xl text-black"></h1>
           </vue-typed-js>
+
+
+
+
         </div>
         <!-- .................... -->
       </div>
@@ -129,6 +134,8 @@ export default {
         'December 30',
       ],
       dateDisplay: 'January 1',
+      moneyDisplay: 1,
+      happiness:50,
       arrayEvents: [],
       currentEvent: [],
       randomEvents: [],
@@ -155,10 +162,13 @@ export default {
       this.randomEvents.sort(() => Math.random() - 0.5)
     },
     nextItem() {
+       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option1money
+       this.happiness = this.happiness + this.currentEvent[0].option1happy
       this.currentEvent.shift()
       this.eventCounter++
       this.currentEvent.push(this.randomEvents[this.eventCounter])
       this.dateDisplay = this.dates[this.eventCounter]
+     
     },
   },
 }
