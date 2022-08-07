@@ -1,7 +1,7 @@
 <template>
   <div class="splashBoxContainer sm:w-80 w-screen h-screen sm:h-96 sm:w-1/3">
     <div class="logoContainer mt-10 grid justify-items-center">
-        <img src="https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/start-screen-logo.4e78ede5.png" alt="logo" width="200" height="200">
+        <!-- <img src="https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/start-screen-logo.4e78ede5.png" alt="logo" width="200" height="200"> -->
      
     </div>
 

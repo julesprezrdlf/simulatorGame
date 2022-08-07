@@ -1,13 +1,17 @@
 <template>
-  <div class="playerBoxContainer p-5 sm:w-80 w-screen h-screen sm:h-auto sm sm:w-1/3">
+  <div
+    class="playerBoxContainer p-5 sm:w-80 w-screen h-screen sm:h-auto sm sm:w-1/3"
+  >
     <div class="hudContainer grid grid-cols-4 gap-4">
       <div class="moneyContainer">
-        <p class="mb-0 text-xl"> $ {{ moneyDisplay }} M</p>
-        <p> Valuation</p>
+        <p class="mb-0 text-xl">$ {{ moneyDisplay }} M</p>
+        <p>Valuation</p>
       </div>
       <div class="HappinessContainer grid justify-items-center col-span-2">
-        <img class="smileyContainer mb-2"
-          src="https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/happiness-06.a501ff39.png" />
+        <!-- <img
+          class="smileyContainer mb-2"
+          src="https://public-assets.toggl.com/b/assets/@toggl/startup-simulator/images/happiness-06.a501ff39.png"
+        /> -->
         <p>{{ happiness }}</p>
         <p>Happiness</p>
       </div>
@@ -37,10 +41,6 @@
           <vue-typed-js :typeSpeed="10" :strings="[item.text]">
             <h1 class="typing text-xl text-black"></h1>
           </vue-typed-js>
-
-
-
-
         </div>
         <!-- .................... -->
       </div>
@@ -48,10 +48,16 @@
     <!-- Button text from JSON -->
     <div v-for="item in currentEvent" :key="item.id">
       <div class="playerButtonArea grid grid-cols-6">
-        <button class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2" @click="nextItem">
+        <button
+          class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2"
+          @click="nextItem"
+        >
           {{ item.option1 }}
         </button>
-        <button class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-2 mb-5 " @click="nextItem2">
+        <button
+          class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-2 mb-5"
+          @click="nextItem2"
+        >
           {{ item.option2 }}
         </button>
       </div>
@@ -153,86 +159,95 @@ export default {
       this.randomEvents.sort(() => Math.random() - 0.5)
     },
     nextItem() {
-
-
       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option1money
       this.happiness = this.happiness + this.currentEvent[0].option1happy
 
-if (this.happiness < 0 || this.moneyDisplay < 0) {
-  alert("you lose");
-} else {
-   if ((this.happiness > 0) && (this.moneyDisplay > 0) && (this.dateDisplay !== "December 30")) { 
-        this.currentEvent.shift()
-        this.eventCounter++
-        this.currentEvent.push(this.randomEvents[this.eventCounter])
-        this.dateDisplay = this.dates[this.eventCounter]
+      if (this.happiness < 0 || this.moneyDisplay < 0) {
+        
+        alert('you lose');
+        this.$emit('setLoseActive', true);
+        
+      } else {
+        if (
+          this.happiness > 0 &&
+          this.moneyDisplay > 0 &&
+          this.dateDisplay !== 'December 30'
+        ) {
+          this.currentEvent.shift()
+          this.eventCounter++
+          this.currentEvent.push(this.randomEvents[this.eventCounter])
+          this.dateDisplay = this.dates[this.eventCounter]
+        }
 
+        if (
+          this.happiness > 0 &&
+          this.moneyDisplay > 0 &&
+          this.dateDisplay === 'December 30'
+        ) {
+          alert('win')
+          this.currentEvent.shift()
+          this.eventCounter++
+          this.currentEvent.push(this.randomEvents[this.eventCounter])
+          this.dateDisplay = this.dates[this.eventCounter]
+        }
+
+        if (
+          this.happiness > 0 &&
+          this.moneyDisplay < 1000 &&
+          this.dateDisplay === 'December 30'
+        ) {
+          alert('win pero poco')
+          this.currentEvent.shift()
+          this.eventCounter++
+          this.currentEvent.push(this.randomEvents[this.eventCounter])
+          this.dateDisplay = this.dates[this.eventCounter]
+        }
       }
-
-
- if ((this.happiness > 0) && (this.moneyDisplay > 0) && (this.dateDisplay === "December 30")) {
-        alert("win");
-        this.currentEvent.shift()
-        this.eventCounter++
-        this.currentEvent.push(this.randomEvents[this.eventCounter])
-        this.dateDisplay = this.dates[this.eventCounter]
-
-      }
-
-if ((this.happiness > 0) && (this.moneyDisplay < 1000) && (this.dateDisplay === "December 30")) {
-        alert("win pero poco");
-        this.currentEvent.shift()
-        this.eventCounter++
-        this.currentEvent.push(this.randomEvents[this.eventCounter])
-        this.dateDisplay = this.dates[this.eventCounter]
-
-      }
-}
-
     },
 
-     nextItem2() {
-
-
+    nextItem2() {
       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option2money
       this.happiness = this.happiness + this.currentEvent[0].option2happy
 
-if (this.happiness < 0 || this.moneyDisplay < 0) {
-  alert("you lose");
-} else {
-   if ((this.happiness > 0) && (this.moneyDisplay > 0) && (this.dateDisplay !== "December 30")) { 
-        this.currentEvent.shift()
-        this.eventCounter++
-        this.currentEvent.push(this.randomEvents[this.eventCounter])
-        this.dateDisplay = this.dates[this.eventCounter]
+      if (this.happiness < 0 || this.moneyDisplay < 0) {
+        alert('you lose')
+        this.$emit('setLoseActive', true);
+      } else {
+        if (
+          this.happiness > 0 &&
+          this.moneyDisplay > 0 &&
+          this.dateDisplay !== 'December 30'
+        ) {
+          this.currentEvent.shift()
+          this.eventCounter++
+          this.currentEvent.push(this.randomEvents[this.eventCounter])
+          this.dateDisplay = this.dates[this.eventCounter]
+        }
 
+        if (
+          this.happiness > 0 &&
+          this.moneyDisplay > 0 &&
+          this.dateDisplay === 'December 30'
+        ) {
+          alert('win')
+          this.currentEvent.shift()
+          this.eventCounter++
+          this.currentEvent.push(this.randomEvents[this.eventCounter])
+          this.dateDisplay = this.dates[this.eventCounter]
+        }
+
+        if (
+          this.happiness > 0 &&
+          this.moneyDisplay < 1000 &&
+          this.dateDisplay === 'December 30'
+        ) {
+          alert('win pero poco')
+          this.currentEvent.shift()
+          this.eventCounter++
+          this.currentEvent.push(this.randomEvents[this.eventCounter])
+          this.dateDisplay = this.dates[this.eventCounter]
+        }
       }
-
-
- if ((this.happiness > 0) && (this.moneyDisplay > 0) && (this.dateDisplay === "December 30")) {
-        alert("win");
-        this.currentEvent.shift()
-        this.eventCounter++
-        this.currentEvent.push(this.randomEvents[this.eventCounter])
-        this.dateDisplay = this.dates[this.eventCounter]
-
-      }
-
-if ((this.happiness > 0) && (this.moneyDisplay < 1000) && (this.dateDisplay === "December 30")) {
-        alert("win pero poco");
-        this.currentEvent.shift()
-        this.eventCounter++
-        this.currentEvent.push(this.randomEvents[this.eventCounter])
-        this.dateDisplay = this.dates[this.eventCounter]
-
-      }
-}
-
- 
-
-
-
-
     },
   },
 }

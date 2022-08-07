@@ -4,7 +4,7 @@
    <NavBox/>
     <SplashBox v-if="splashIsActive" @setSplashUnActive="setSplashUnActive"/>
     <TutorialBox v-if="tutorialIsActive" @setTutorialUnActive="setTutorialUnActive"/>
-    <PlayerBox v-if="gameIsActive"/>
+    <PlayerBox v-if="gameIsActive" @setLoseActive="setLoseActive"/>
   </div>
 </template>
 
@@ -18,6 +18,9 @@ export default {
             splashIsActive: true,
             tutorialIsActive: false,
             gameIsActive: false,
+            loseIsActive: false,
+            midWinIsActive: false,
+            winIsActice: false,
         };
     },
     methods: {
@@ -29,6 +32,10 @@ export default {
             this.tutorialIsActive = false;
             this.gameIsActive = true; 
         },
+        setLoseActive(value){
+           this.loseIsActive = true;
+            this.gameIsActive = false;   
+        }
 
     },
 

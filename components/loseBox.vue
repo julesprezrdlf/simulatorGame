@@ -1,6 +1,6 @@
 <template>
-  <div class="navContainer hidden sm:block">
-    <h1>TechCompany Simulator</h1>
+  <div loseContainer>
+    <h1>Defeat</h1>
   </div>
 </template>
 
