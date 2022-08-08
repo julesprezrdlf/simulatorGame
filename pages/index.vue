@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('//fonts.googleapis.com/css2?family=VT323&display=swap');
 *{
     font-family: 'VT323', monospace;
 /* border:1px solid red !important; */
