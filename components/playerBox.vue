@@ -162,11 +162,11 @@ export default {
       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option1money
       this.happiness = this.happiness + this.currentEvent[0].option1happy
 
-      if (this.happiness < 0 || this.moneyDisplay < 0) {
+      if ((this.happiness < 0) || (this.moneyDisplay < 0) || (this.happiness > 0 && this.moneyDisplay < 1000 && this.dateDisplay === 'December 30')) {
         
-        alert('you lose');
-        this.$emit('setLoseActive', true);
-        
+        alert('Defeat :(');
+        // this.$emit('setLoseActive', true);
+        this.$emit('setSplashActive', true);
       } else {
         if (
           this.happiness > 0 &&
@@ -184,24 +184,24 @@ export default {
           this.moneyDisplay > 0 &&
           this.dateDisplay === 'December 30'
         ) {
-          alert('win')
+          alert('Victory! :D')
           this.currentEvent.shift()
           this.eventCounter++
           this.currentEvent.push(this.randomEvents[this.eventCounter])
           this.dateDisplay = this.dates[this.eventCounter]
         }
 
-        if (
-          this.happiness > 0 &&
-          this.moneyDisplay < 1000 &&
-          this.dateDisplay === 'December 30'
-        ) {
-          alert('win pero poco')
-          this.currentEvent.shift()
-          this.eventCounter++
-          this.currentEvent.push(this.randomEvents[this.eventCounter])
-          this.dateDisplay = this.dates[this.eventCounter]
-        }
+        // if (
+        //   this.happiness > 0 &&
+        //   this.moneyDisplay < 1000 &&
+        //   this.dateDisplay === 'December 30'
+        // ) {
+        //   alert('win pero poco')
+        //   this.currentEvent.shift()
+        //   this.eventCounter++
+        //   this.currentEvent.push(this.randomEvents[this.eventCounter])
+        //   this.dateDisplay = this.dates[this.eventCounter]
+        // }
       }
     },
 
@@ -209,8 +209,8 @@ export default {
       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option2money
       this.happiness = this.happiness + this.currentEvent[0].option2happy
 
-      if (this.happiness < 0 || this.moneyDisplay < 0) {
-        alert('you lose')
+      if ((this.happiness < 0) || (this.moneyDisplay < 0) || (this.happiness > 0 && this.moneyDisplay < 1000 && this.dateDisplay === 'December 30')) {
+        alert('Defeat :(')
         this.$emit('setLoseActive', true);
       } else {
         if (
@@ -229,24 +229,25 @@ export default {
           this.moneyDisplay > 0 &&
           this.dateDisplay === 'December 30'
         ) {
-          alert('win')
+          alert('Victory! :D')
           this.currentEvent.shift()
           this.eventCounter++
           this.currentEvent.push(this.randomEvents[this.eventCounter])
           this.dateDisplay = this.dates[this.eventCounter]
         }
 
-        if (
-          this.happiness > 0 &&
-          this.moneyDisplay < 1000 &&
-          this.dateDisplay === 'December 30'
-        ) {
-          alert('win pero poco')
-          this.currentEvent.shift()
-          this.eventCounter++
-          this.currentEvent.push(this.randomEvents[this.eventCounter])
-          this.dateDisplay = this.dates[this.eventCounter]
-        }
+        // if (
+        //   this.happiness > 0 &&
+        //   this.moneyDisplay < 1000 &&
+        //   this.dateDisplay === 'December 30'
+        // ) 
+        // {
+        //   alert('win pero poco')
+        //   this.currentEvent.shift()
+        //   this.eventCounter++
+        //   this.currentEvent.push(this.randomEvents[this.eventCounter])
+        //   this.dateDisplay = this.dates[this.eventCounter]
+        // }
       }
     },
   },

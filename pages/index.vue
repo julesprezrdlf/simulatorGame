@@ -4,7 +4,8 @@
    <NavBox/>
     <SplashBox v-if="splashIsActive" @setSplashUnActive="setSplashUnActive"/>
     <TutorialBox v-if="tutorialIsActive" @setTutorialUnActive="setTutorialUnActive"/>
-    <PlayerBox v-if="gameIsActive" @setLoseActive="setLoseActive"/>
+    <PlayerBox v-if="gameIsActive" @setSplashActive="setSplashActive"/>
+    <!-- <LoseBox v-if="loseIsActive" @setLoseUnActive="setLoseUnActive"/> -->
   </div>
 </template>
 
@@ -25,17 +26,21 @@ export default {
     },
     methods: {
         setSplashUnActive(value) {
-            this.splashIsActive = false;
-            this.tutorialIsActive = true;       
+            this.splashIsActive = !this.splashIsActive;
+            this.tutorialIsActive = !this.tutorialIsActive;       
         },
             setTutorialUnActive(value) {
-            this.tutorialIsActive = false;
-            this.gameIsActive = true; 
+            this.tutorialIsActive = !this.tutorialIsActive;
+            this.gameIsActive = !this.gameIsActive; 
         },
-        setLoseActive(value){
-           this.loseIsActive = true;
-            this.gameIsActive = false;   
-        }
+        setSplashActive(value){
+           this.gameIsActive = false;
+            this.splashIsActive = true;   
+        },
+        // setLoseUnActive(value){
+        //    this.loseIsActive = !this.loseIsActive;
+        //     this.splashIsActive = !this.splashIsActive;   
+        // },
 
     },
 
@@ -43,7 +48,7 @@ export default {
 </script>
 
 <style>
-@import url('//fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 *{
     font-family: 'VT323', monospace;
 /* border:1px solid red !important; */
