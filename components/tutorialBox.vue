@@ -8,8 +8,8 @@
         Your goal is to have a valuation of $1 billion by the end of the year
       </p>
 
-      <p class="mt-3">Use your time wisely!</p>
-      <p class="mt-3">Also, make sure to keep your employees happy :)</p>
+      <p class="mt-3">Keep everyone happy :-)</p>
+      <p class="mt-3">And use your time wisely!</p>
     </div>
     <div class="tutorialButtonArea grid grid-cols-6 mt-10 ">
       <button

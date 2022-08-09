@@ -4,7 +4,7 @@
   >
     <div class="hudContainer grid grid-cols-4 gap-4">
       <div class="moneyContainer">
-        <p class="mb-0 text-xl">$ {{ moneyDisplay }} M</p>
+        <p class="mb-0 text-base">$ {{ moneyDisplay }} M</p>
         <p>Valuation</p>
       </div>
       <div class="HappinessContainer grid justify-items-center col-span-2">
@@ -16,7 +16,7 @@
         <p>Happiness</p>
       </div>
       <div class="DateContainer">
-        <p class="mb-2 text-xl">{{ dateDisplay }}</p>
+        <p class="mb-2 text-base">{{ dateDisplay }}</p>
         <!-- <div class="progressBar"><p class="limit">111</p></div> -->
       </div>
     </div>
@@ -32,14 +32,14 @@
       <div class="playerHud mx-10 p-5">
         <!-- Name from JSON -->
         <div v-for="item in currentEvent" :key="item.id">
-          <h2 class="text-2xl mt-14">{{ item.name }}</h2>
+          <h2 class="text-sm mt-14">{{ item.name }}</h2>
         </div>
         <!-- .................... -->
 
         <!-- Text from JSON -->
         <div v-for="item in currentEvent" :key="item.id">
           <vue-typed-js :typeSpeed="10" :strings="[item.text]">
-            <h1 class="typing text-xl text-black"></h1>
+            <h1 class="typing text-xs text-black"></h1>
           </vue-typed-js>
         </div>
         <!-- .................... -->
@@ -49,13 +49,13 @@
     <div v-for="item in currentEvent" :key="item.id">
       <div class="playerButtonArea grid grid-cols-6">
         <button
-          class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2"
+          class="button-growPlayer text-xs col-start-2 col-span-4 sm:col-start-3 sm:col-span-2"
           @click="nextItem"
         >
           {{ item.option1 }}
         </button>
         <button
-          class="button-growPlayer col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-2 mb-5"
+          class="button-growPlayer text-xs col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-2 mb-5"
           @click="nextItem2"
         >
           {{ item.option2 }}
@@ -162,11 +162,15 @@ export default {
       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option1money
       this.happiness = this.happiness + this.currentEvent[0].option1happy
 
-      if ((this.happiness < 0) || (this.moneyDisplay < 0) || (this.happiness > 0 && this.moneyDisplay < 1000 && this.dateDisplay === 'December 30')) {
-        
-        alert('Defeat :(');
-        // this.$emit('setLoseActive', true);
-        this.$emit('setSplashActive', true);
+      if (
+        this.happiness < 0 ||
+        this.moneyDisplay < 0 ||
+        (this.happiness > 0 &&
+          this.moneyDisplay < 1000 &&
+          this.dateDisplay === 'December 30')
+      ) {
+       
+        this.$emit('setSplashActive', false);
       } else {
         if (
           this.happiness > 0 &&
@@ -185,23 +189,12 @@ export default {
           this.dateDisplay === 'December 30'
         ) {
           alert('Victory! :D')
+ this.$emit('setWinActive', false);
           this.currentEvent.shift()
           this.eventCounter++
           this.currentEvent.push(this.randomEvents[this.eventCounter])
           this.dateDisplay = this.dates[this.eventCounter]
         }
-
-        // if (
-        //   this.happiness > 0 &&
-        //   this.moneyDisplay < 1000 &&
-        //   this.dateDisplay === 'December 30'
-        // ) {
-        //   alert('win pero poco')
-        //   this.currentEvent.shift()
-        //   this.eventCounter++
-        //   this.currentEvent.push(this.randomEvents[this.eventCounter])
-        //   this.dateDisplay = this.dates[this.eventCounter]
-        // }
       }
     },
 
@@ -209,9 +202,15 @@ export default {
       this.moneyDisplay = this.moneyDisplay + this.currentEvent[0].option2money
       this.happiness = this.happiness + this.currentEvent[0].option2happy
 
-      if ((this.happiness < 0) || (this.moneyDisplay < 0) || (this.happiness > 0 && this.moneyDisplay < 1000 && this.dateDisplay === 'December 30')) {
-        alert('Defeat :(')
-        this.$emit('setLoseActive', true);
+      if (
+        this.happiness < 0 ||
+        this.moneyDisplay < 0 ||
+        (this.happiness > 0 &&
+          this.moneyDisplay < 1000 &&
+          this.dateDisplay === 'December 30')
+      ) {
+       
+        this.$emit('setSplashActive', false);
       } else {
         if (
           this.happiness > 0 &&
@@ -230,24 +229,12 @@ export default {
           this.dateDisplay === 'December 30'
         ) {
           alert('Victory! :D')
+ this.$emit('setWinActive', false);
           this.currentEvent.shift()
           this.eventCounter++
           this.currentEvent.push(this.randomEvents[this.eventCounter])
           this.dateDisplay = this.dates[this.eventCounter]
         }
-
-        // if (
-        //   this.happiness > 0 &&
-        //   this.moneyDisplay < 1000 &&
-        //   this.dateDisplay === 'December 30'
-        // ) 
-        // {
-        //   alert('win pero poco')
-        //   this.currentEvent.shift()
-        //   this.eventCounter++
-        //   this.currentEvent.push(this.randomEvents[this.eventCounter])
-        //   this.dateDisplay = this.dates[this.eventCounter]
-        // }
       }
     },
   },
@@ -266,7 +253,6 @@ export default {
   padding: 0 16px;
   cursor: pointer;
   min-height: 40px;
-  /* min-width: 200px; */
 
   transition: all 0.3s ease-in-out;
 }

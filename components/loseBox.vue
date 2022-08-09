@@ -4,17 +4,16 @@
       <h1>Defeat</h1>
     </div>
     <div class="textTutorialContainer grid justify-items-center">
-      <p class="mt-10 text-center">
+      <p class="mt-10 px-5 text-center">
        You didn't get to your goal and your company collapses.
       </p>
 
-      <p class="mt-3">You go back driving for Uber, or being alcoholic. Who knows.</p>
       <p class="mt-3">But hey! You can play again</p>
     </div>
     <div class="tutorialButtonArea grid grid-cols-6 mt-10 ">
       <button
         class="button-grow col-start-2 col-span-4 sm:col-start-3 sm:col-span-2 mt-72 sm:mt-64 mb-10"
-        @click="changeLose"
+        @click="changeGame"
       >
         Play again
       </button>
@@ -25,7 +24,7 @@
 <script>
 export default {
  methods: {
-    changeTutorial() {
+    changeGame() {
       this.$emit('setLoseUnActive', false)
     },
   },
